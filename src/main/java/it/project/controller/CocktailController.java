@@ -26,4 +26,10 @@ public class CocktailController {
 	public Cocktail getCocktailsByFirstLetter(@RequestParam int id) {
 		return cocktailService.getCocktailById(id);
 	}
+	
+	@GetMapping(value = "/by-ingredient", produces = "application/json")
+	public CocktailResponse getCocktailsByIngredient(@RequestParam String ingredient) {
+		return cocktailService.getCocktailByIngredient(ingredient);
+	}
+	
 }
