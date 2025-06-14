@@ -10,4 +10,14 @@ import lombok.Data;
 public class CocktailResponse {
 	@JsonProperty("drinks")
 	private List<Cocktail> drinks;
+
+	public List<Cocktail> getDrinks() {
+		return drinks;
+	}
+
+	public void setDrinks(List<Cocktail> drinks) {
+		this.drinks = drinks;
+	}
+	
+	
 }
